@@ -1,0 +1,13 @@
+---
+description: Absante architecture, relative APIs, and role isolation
+alwaysApply: true
+---
+
+Read `ARCHITECTURE.md` and `AGENT_GUIDELINES.md` before changing this repo.
+
+- Isolate student `/` from doctor `/doctor`. Never mix both portals on one page.
+- Never hardcode `localhost` or `127.0.0.1` in application source. Call relative `/api/...`. `VITE_API_BASE_URL` is an optional origin only.
+- Do not expose the class roster on student APIs or the student UI. Public check-in uses university `student_id`.
+- Doctor routes require a Bearer token. Attendance windows and session defaults use `APP_TIMEZONE` (Asia/Riyadh).
+- Manual attendance must send the lecture stepper `session_date`.
+- After changes: `npm --prefix frontend run build` and `.venv/bin/pytest`.

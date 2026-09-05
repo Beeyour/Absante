@@ -1,0 +1,12 @@
+# Absante Cursor rules
+
+Always apply when working in this repository.
+
+- Read ARCHITECTURE.md and AGENT_GUIDELINES.md before edits.
+- Keep `/` for students and `/doctor` for lecturers. Do not put both dashboards on one page.
+- Never hardcode localhost or 127.0.0.1 in app source. Use relative `/api/...` (optional VITE_API_BASE_URL origin only).
+- Do not return or render the full student roster on the public student portal.
+- Student check-in uses university student_id. Doctor routes require Bearer tokens.
+- Session default dates and attendance windows use APP_TIMEZONE (Asia/Riyadh), not the browser timezone.
+- Manual attendance must use the currently selected stepper session_date.
+- After UI or API changes run: `npm --prefix frontend run build` and `.venv/bin/pytest`.
