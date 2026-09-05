@@ -4,9 +4,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .coverage
-attendance.db
 .env
 node_modules/
 frontend/node_modules/
-frontend/dist/
 .DS_Store
